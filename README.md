@@ -25,11 +25,10 @@ Want to check more demo videos? Follow me on [Twitter](https://twitter.com/n4ze3
 
 ## Quick Deployments 🚀
 
-### Railway with Supabase
+### Railway (One-click deployment)
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/TXdjD7?referralCode=olbszX)
 
-for more details - [watch demo](https://twitter.com/n4ze3m/status/1668208861663354882)
 
 ## Installation 🛠️
 
@@ -177,6 +176,13 @@ Interested in contributing? Check out the [contributing guide](CONTRIBUTION.md).
 
 ## Sponsors 💖
 
+
+Dialoqbase nothing without the support of our wonderful sponsors. If you are interested in becoming a sponsor, please visit the [sponsorship page](https://github.com/sponsors/n4ze3m).
+
+
+
+### Special Sponsor
+
 <p>
   <a href="https://flogesoft.com/?utm_source=dialoqbase&utm_medium=sponsor&utm_campaign=dialoqbase">
     <img src="https://flogesoft.com/images/floges_sponsored.svg" width="150"
@@ -185,6 +191,14 @@ Interested in contributing? Check out the [contributing guide](CONTRIBUTION.md).
   </a>
 </p>
 
+### Wonderful Sponsors
+
+<a href="https://github.com/mjtechguy" target="_blank"><img src="https://avatars.githubusercontent.com/u/29070994?s=64&v=4"></a>
+<a href="https://github.com/senavi888" target="_blank"><img src="https://avatars.githubusercontent.com/u/161348858?s=64&v=4"></a>
+<a href="https://github.com/hkjang" target="_blank"><img src="https://avatars.githubusercontent.com/u/3069493?s=64&v=4"></a>
+<a href="https://github.com/FarazPatankar" target="_blank"><img src="https://avatars.githubusercontent.com/u/10681116?s=64&v=4"></a>
+
+And many more wonderful supporters from [Ko-fi](https://ko-fi.com/n4ze3m).
 ## License 📝
 
 [MIT](LICENSE)

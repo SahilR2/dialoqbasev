@@ -3,7 +3,7 @@ import { ChatRequestBody } from "./types";
 import { DialoqbaseVectorStore } from "../../utils/store";
 import { embeddings } from "../../utils/embeddings";
 import { chatModelProvider } from "../../utils/models";
-import { BaseRetriever } from "langchain/schema/retriever";
+import { BaseRetriever } from "@langchain/core/retrievers";
 import { DialoqbaseHybridRetrival } from "../../utils/hybrid";
 import { Document } from "langchain/document";
 import { createChain, groupMessagesByConversation } from "../../chain";
@@ -200,7 +200,7 @@ export const chatRequestHandler = async (
 
     const documents = await documentPromise;
 
-    await prisma.botWebHistory.create({
+    const chatId = await prisma.botWebHistory.create({
       data: {
         chat_id: history_id,
         bot_id: bot.id,
@@ -220,6 +220,7 @@ export const chatRequestHandler = async (
 
     return {
       bot: {
+        chat_id: chatId.id,
         text: botResponse,
         sourceDocuments: documents,
       },
@@ -307,7 +308,6 @@ export const chatRequestStreamHandler = async (
 
     if (bot.bot_protect) {
       if (!request.session.get("is_bot_allowed")) {
-
         reply.raw.setHeader("Content-Type", "text/event-stream");
 
         reply.sse({
@@ -520,7 +520,7 @@ export const chatRequestStreamHandler = async (
 
     const documents = await documentPromise;
 
-    await prisma.botWebHistory.create({
+    const chatId = await prisma.botWebHistory.create({
       data: {
         chat_id: history_id,
         bot_id: bot.id,
@@ -543,6 +543,7 @@ export const chatRequestStreamHandler = async (
       id: "",
       data: JSON.stringify({
         bot: {
+          chat_id: chatId.id,
           text: response,
           sourceDocuments: documents,
         },

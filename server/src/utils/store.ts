@@ -1,7 +1,7 @@
-import { Document } from "langchain/document";
+import { Document } from "@langchain/core/documents";
 import { PrismaClient } from "@prisma/client";
-import { Embeddings } from "langchain/embeddings/base";
-import { VectorStore } from "langchain/vectorstores/base";
+import { Embeddings } from "@langchain/core/embeddings";
+import { VectorStore } from "@langchain/core/vectorstores";
 const prisma = new PrismaClient();
 export interface DialoqbaseLibArgs {
   botId: string;
@@ -18,7 +18,7 @@ interface SearchEmbeddingsResponse {
 export class DialoqbaseVectorStore extends VectorStore {
   botId: string;
   sourceId: string | null;
-  embeddings: Embeddings;
+  declare embeddings: Embeddings;
 
   constructor(embeddings: Embeddings, args: DialoqbaseLibArgs) {
     super(embeddings, args);
